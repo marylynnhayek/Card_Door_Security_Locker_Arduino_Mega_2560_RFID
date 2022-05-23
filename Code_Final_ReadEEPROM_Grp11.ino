@@ -1,3 +1,4 @@
+//Partie Jean
 #include <EEPROM.h>
 #include <MFRC522.h>
 
