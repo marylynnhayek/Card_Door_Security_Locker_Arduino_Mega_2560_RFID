@@ -1,4 +1,5 @@
 //Group 11: Card door security locker
+//Partie Mary-Lynn
 #include <EEPROM.h>
 #include <MFRC522.h>
 #include <LiquidCrystal.h> //For the LCD
@@ -31,7 +32,7 @@ double valid_table[5];
 unsigned long firstFailTime; //This is the first failed attempt to unlock the door
 
 void setup() {
-  //Partie Mary-Lynn
+//Partie Mary-Lynn
   valid_table[fcount]=millis();
   // Put your setup code here, to run once:
   byte value;
@@ -69,7 +70,7 @@ for(int i=0; i<250; i++)
   }
 
 }
-//Partie Jean
+
 for(int i=0; i<=counter; i++)
 {
 Serial.println(ID[i]);
@@ -79,9 +80,9 @@ SPI.begin();
 mfrc522.PCD_Init();
 delay(5000);
 }
-
+//Partie Jean
 void loop() {
-  //Partie Jean
+  
   while(fcount<=2)
   {
     mfrc522.PCD_Init();
@@ -144,6 +145,7 @@ void loop() {
               fcount++;
           }
         }
+ //Partie jean
               Serial.print(fcount);
               Serial.println(status);
               status="";
